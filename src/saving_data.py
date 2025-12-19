@@ -4,8 +4,8 @@ from preprocessing import preprocess_data
 
 
 def save_dataset_for_datalens(
-    data_dir=r"C:\Users\romar\PycharmProjects\BuisnessAnalytics\dataset",
-    output_path=r"C:\Users\romar\PycharmProjects\BuisnessAnalytics\data_for_datalens\orders_full.csv"
+    data_dir=r"\dataset",
+    output_path=r"\data_for_datalens\orders_full.csv"
 ):
     """
     Загружает данные, выполняет предобработку
@@ -31,11 +31,12 @@ def save_dataset_for_datalens(
         encoding="utf-8"
     )
 
-    print("✅ Датасет успешно сохранён")
-    print(f"📄 Файл: {output_path}")
-    print(f"📊 Строк: {orders_full.shape[0]}")
-    print(f"📊 Колонок: {orders_full.shape[1]}")
+    print("Датасет успешно сохранён")
+    print(f"Файл: {output_path}")
+    print(f"Строк: {orders_full.shape[0]}")
+    print(f"Колонок: {orders_full.shape[1]}")
 
 
 if __name__ == "__main__":
+
     save_dataset_for_datalens()
