@@ -3,7 +3,7 @@ import pandas as pd
 
 def load_data(data_dir="dataset"):
     """
-    Загружает все CSV-файлы из папки data_dir в словарь dfs.
+    Загружает все CSV-файлы из папки dataset в словарь dfs.
     """
     dfs = {}
     for filename in os.listdir(data_dir):
@@ -13,3 +13,4 @@ def load_data(data_dir="dataset"):
             dfs[df_name] = pd.read_csv(path)
             print(f"[LOAD] {df_name} ({dfs[df_name].shape[0]} строк)")
     return dfs
+
