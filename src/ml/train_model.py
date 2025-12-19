@@ -8,7 +8,7 @@ from preprocessing import preprocess_data
 
 def train_ml_model():
     # --- Загрузка и предобработка ---
-    dfs = load_data(data_dir=r"C:\Users\romar\PycharmProjects\BuisnessAnalytics\dataset")
+    dfs = load_data(data_dir=r"\dataset")
     dfs = preprocess_data(dfs)
     orders_full = dfs["orders_full"]
 
@@ -54,7 +54,7 @@ def train_ml_model():
         n_estimators=200,
         random_state=42,
         n_jobs=-1,
-        class_weight='balanced'  # ⚡ учитываем редкий класс
+        class_weight='balanced'  #учитываем редкий класс
     )
     model.fit(X_train, y_train)
 
@@ -71,3 +71,4 @@ def train_ml_model():
 
 if __name__ == "__main__":
     train_ml_model()
+
